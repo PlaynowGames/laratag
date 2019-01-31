@@ -1,0 +1,24 @@
+{
+  "page": {
+    "font-size" : "10",
+    "orientation": "P",
+    "columns": "3",
+    "unit": "mm",
+    "size": {
+      "0": "106",
+      "1": "122"
+    },
+    "margin-top": "8",
+    "margin-left": "0",
+    "margin-right": "0",
+    "margin-bottom": "24",
+    "margin-header": "0.0",
+    "margin-footer": "0.0"
+  },
+  "tag": {
+    "width" : "35",
+    "height" : "42",
+    "border" : "0",
+    "margin-left" : "0"
+  }
+}
