@@ -1,7 +1,7 @@
 <?php
 namespace PhpPimacoTest;
 
-use Proner\PhpPimaco\Tags\Img;
+use PlaynowGames\LaraTag\Tags\Img;
 
 class ImgTest extends \PHPUnit_Framework_TestCase
 {

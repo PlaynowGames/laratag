@@ -17,12 +17,12 @@ O PHP PIMACO é um pacote para geração de etiquetas usando a biblioteca <a hre
 
 Para fazer instalação do PHPPimaco utilize o composer
 ```php
-composer require proner/phppimaco
+composer require playnowgames/laratag
 ```
 ou adicione isso ao require do seu composer.json
 ```php
 "require":{
-    "proner/phppimaco": "dev-master"
+    "playnowgames/laratag": "dev-master"
 }
 ```
 
@@ -32,14 +32,14 @@ Depois fazer a instalação corretamente você deve seguir os exemplo a baixo pa
 <?php
 require_once "../vendor/autoload.php";
 
-use Proner\PhpPimaco\Tag;
+use PlaynowGames\LaraTag\Tag;
 $tag = new Tag();
 $tag->p("TAG 1");
 ```
 Com a etiqueta criada, você deve estanciar o objeto Pimaco passando o código da etiqueta e adicioná-la e no objeto
 ```php
 <?php
-use Proner\PhpPimaco\Pimaco;
+use PlaynowGames\LaraTag\Pimaco;
 $pimaco = new Pimaco('6182');
 $pimaco->addTag($tag);
 $pimaco->output();
@@ -48,8 +48,8 @@ $pimaco->output();
 ## Exemplo
 ```php
 <?php
-use Proner\PhpPimaco\Tag;
-use Proner\PhpPimaco\Pimaco;
+use PlaynowGames\LaraTag\Tag;
+use PlaynowGames\LaraTag\Pimaco;
 
 $tag = new Tag();
 $tag->p("TAG 1");

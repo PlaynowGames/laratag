@@ -1,7 +1,7 @@
 <?php
 namespace PhpPimacoTest;
 
-use Proner\PhpPimaco\Tags\Barcode;
+use PlaynowGames\LaraTag\Tags\Barcode;
 
 class BarcodeTest extends \PHPUnit_Framework_TestCase
 {

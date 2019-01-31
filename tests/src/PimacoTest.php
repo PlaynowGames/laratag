@@ -2,8 +2,8 @@
 
 namespace PhpPimacoTest;
 
-use Proner\PhpPimaco\Pimaco;
-use Proner\PhpPimaco\Tag;
+use PlaynowGames\LaraTag\Pimaco;
+use PlaynowGames\LaraTag\Tag;
 
 class PimacoTest extends \PHPUnit_Framework_TestCase
 {

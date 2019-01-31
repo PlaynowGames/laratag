@@ -1,7 +1,7 @@
 <?php
 namespace PhpPimacoTest;
 
-use Proner\PhpPimaco\Tags\QrCode;
+use PlaynowGames\LaraTag\Tags\QrCode;
 
 class QrCodeTest extends \PHPUnit_Framework_TestCase
 {

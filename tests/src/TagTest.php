@@ -1,9 +1,9 @@
 <?php
 namespace PhpPimacoTest;
 
-use Proner\PhpPimaco\Tags\Barcode;
-use Proner\PhpPimaco\Tags\P;
-use Proner\PhpPimaco\Tag;
+use PlaynowGames\LaraTag\Tags\Barcode;
+use PlaynowGames\LaraTag\Tags\P;
+use PlaynowGames\LaraTag\Tag;
 
 class TagTest extends \PHPUnit_Framework_TestCase
 {

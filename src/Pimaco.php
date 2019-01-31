@@ -1,6 +1,6 @@
 <?php
 
-namespace Proner\PhpPimaco;
+namespace PlaynowGames\LaraTag;
 
 use mPDF;
 

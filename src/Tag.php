@@ -1,10 +1,10 @@
 <?php
-namespace Proner\PhpPimaco;
+namespace PlaynowGames\LaraTag;
 
-use Proner\PhpPimaco\Tags\Barcode;
-use Proner\PhpPimaco\Tags\Img;
-use Proner\PhpPimaco\Tags\P;
-use Proner\PhpPimaco\Tags\QrCode;
+use PlaynowGames\LaraTag\Tags\Barcode;
+use PlaynowGames\LaraTag\Tags\Img;
+use PlaynowGames\LaraTag\Tags\P;
+use PlaynowGames\LaraTag\Tags\QrCode;
 
 class Tag
 {

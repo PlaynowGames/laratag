@@ -1,5 +1,5 @@
 <?php
-namespace Proner\PhpPimaco\Tags;
+namespace PlaynowGames\LaraTag\Tags;
 
 use Endroid\QrCode\ErrorCorrectionLevel;
 
