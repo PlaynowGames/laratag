@@ -12,6 +12,7 @@ class Barcode
     private $margin;
     private $align;
     private $br;
+	private $space;
 
     function __construct($content,$typeCode = null)
     {
@@ -61,6 +62,12 @@ class Barcode
     {
         $this->br .= "<br>";
     }
+	
+	public function setSpace($space)
+    {
+        $this->space = $space;
+        return $this;
+    }
 
     public function render()
     {
@@ -71,16 +78,27 @@ class Barcode
                 $styles[] = "float: right";
             }
         }
-
+		
+		if( $this->align == 'center' ){
+                $styles[] = "display: block; margin-left: auto; margin-right: auto; width: 65%";
+		}
+		
         if( $this->margin !== null ){
             $styles[] = "margin: {$this->margin}";
         }
+		
+		if( $this->space !== null ){
+            $styles[] = "margin-top:{$this->space}mm";
+        }
+		
 
         if( !empty($styles) ){
             $style = "style='".implode(";",$styles)."'";
         }else{
             $style = "";
         }
+		
+		
 
         $barcode = new BarcodeGeneratorPNG();
 
@@ -113,7 +131,7 @@ class Barcode
                 return "<img ".$style." src='data:image/png;base64," . base64_encode($barcode->getBarcode($this->content, $barcode::TYPE_INTERLEAVED_2_5_CHECKSUM,$this->width, $this->height)) . "'>".$this->br;
 
             case 'TYPE_CODE_128':
-                return "<img ".$style." src='data:image/png;base64," . base64_encode($barcode->getBarcode($this->content, $barcode::TYPE_CODE_128,$this->width, $this->height)) . "'>".$this->br;
+                return "<div ".$style."><img src='data:image/png;base64," . base64_encode($barcode->getBarcode($this->content, $barcode::TYPE_CODE_128,$this->width, $this->height)) . "'></div>";
 
             case 'TYPE_CODE_128_A':
                 return "<img ".$style." src='data:image/png;base64," . base64_encode($barcode->getBarcode($this->content, $barcode::TYPE_CODE_128_A,$this->width, $this->height)) . "'>".$this->br;

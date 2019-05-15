@@ -57,10 +57,10 @@ class Pimaco
         }
         $json = file_get_contents($this->path_template . $this->file_template);
         $std = json_decode($json);
-
-        $size = json_encode($std->page->size);
-        $_size = json_decode($size, true);
-
+		
+		$size = json_encode($std->page->size);
+		$_size = json_decode($size, true);
+	
         $this->width = $_size[0];
         $this->height = $_size[1];
         $this->fontSize = $std->page->{'font-size'};
@@ -84,8 +84,8 @@ class Pimaco
         $rows = ceil($this->tags->count()/$this->columns) + 1;
 
         if( $new%$cols==0 ){
-            $sideCol = "right";
-            $margin = false;
+            $sideCol = "left";
+            $margin = true;
 
         }elseif( $new == ($rows * $cols - ($cols - 1)) ){
             $sideCol = "left";

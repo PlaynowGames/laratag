@@ -69,7 +69,7 @@ class Img
         }
 
         if( $this->height !== null ){
-            $styles[] = "height: {$this->height}mm";
+            $styles[] = "max-height: {$this->height}mm";
         }
 
     		if( $this->br == null ){
@@ -79,7 +79,9 @@ class Img
     				$styles[] = "float: right";
     			}
     		}
-
+		
+		$styles[] = "width: 100%; height:auto";
+		
         if( $this->margin !== null ){
             $styles[] = "margin: {$this->margin}";
         }

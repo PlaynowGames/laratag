@@ -16,6 +16,7 @@ class Tag
     private $size;
     private $padding;
     private $marginLeft;
+	private $margin;
 
     function __construct($content = null)
     {
@@ -66,6 +67,12 @@ class Tag
     public function setPadding($padding)
     {
         $this->padding = $padding;
+        return $this;
+    }
+	
+	public function setMargin($margin)
+    {
+        $this->margin = $margin;
         return $this;
     }
 
@@ -154,6 +161,10 @@ class Tag
         if( !empty($this->align) ){
             $style[] = "text-align: {$this->align}";
         }
+		
+		if( $this->margin !== null ){
+            $style[] = " margin-left: {$this->margin}mm";
+        }
 
         $tags = $this->getTags();
         foreach($tags as $tag){
@@ -165,6 +176,8 @@ class Tag
         }else{
             $this->content = "<div><div style='padding: {$this->padding}mm;'>{$this->content}</div></div>";
         }
+		
+		//echo $this->content;
 
         return $this->content;
     }
