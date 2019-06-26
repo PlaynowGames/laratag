@@ -148,4 +148,10 @@ class Pimaco
         $this->pdf->WriteHTML($this->render());
         $this->pdf->Output();
     }
+	
+	public function toString()
+    {
+        $this->pdf->WriteHTML($this->render());
+        $this->pdf->Output('', 'S');
+    }
 }
