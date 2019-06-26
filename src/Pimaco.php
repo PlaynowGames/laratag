@@ -152,6 +152,6 @@ class Pimaco
 	public function toString()
     {
         $this->pdf->WriteHTML($this->render());
-        $this->pdf->Output('', 'S');
+        return $this->pdf->Output('', 'S');
     }
 }
