@@ -8,6 +8,7 @@ class P
     private $bold;
 	private $margin;
 	private $align;
+	private $height;
 
     function __construct($content)
     {
@@ -37,6 +38,12 @@ class P
 	public function setAlign($align)
     {
         $this->align = $align;
+        return $this;
+    }
+	
+	public function setHeight($height)
+    {
+        $this->height = $height;
         return $this;
     }
 	
@@ -71,7 +78,11 @@ class P
 		if( $this->align !== null ){
             $style[] = "text-align: {$this->align}";
         }
+		if( $this->height !== null ){
+			$style[] = "height: {$this->height}px";
+		}
 
+		$style[] = "width: 100%";	
 
         if( !empty($style) ){
             $content = "<{$tag} style='".implode(";",$style)."; '>{$this->content}</{$tag}>";
