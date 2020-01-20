@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf938cc171dd39f1209d339c53d6a3bb",
+    "content-hash": "7f21160022d6ab8b6234e530e0b074d5",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -380,23 +380,29 @@
         },
         {
             "name": "picqer/php-barcode-generator",
-            "version": "v0.2.2",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/picqer/php-barcode-generator.git",
-                "reference": "f754cbd592f3131af144dfcc6a3090fd0f6d1793"
+                "reference": "fd18d04d644ecb2efafff8acfaddc91d1ee59b60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/picqer/php-barcode-generator/zipball/f754cbd592f3131af144dfcc6a3090fd0f6d1793",
-                "reference": "f754cbd592f3131af144dfcc6a3090fd0f6d1793",
+                "url": "https://api.github.com/repos/picqer/php-barcode-generator/zipball/fd18d04d644ecb2efafff8acfaddc91d1ee59b60",
+                "reference": "fd18d04d644ecb2efafff8acfaddc91d1ee59b60",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "ext-mbstring": "*",
+                "php": ">=7.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.3"
+                "phpunit/phpunit": "^8.5"
+            },
+            "suggest": {
+                "ext-bcmath": "Barcode IMB (Intelligent Mail Barcode) needs bcmath extension",
+                "ext-gd": "For JPG and PNG generators, GD or Imagick is required",
+                "ext-imagick": "For JPG and PNG generators, GD or Imagick is required"
             },
             "type": "library",
             "autoload": {
@@ -406,7 +412,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPLv3"
+                "LGPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -416,11 +422,12 @@
                 },
                 {
                     "name": "Casper Bakker",
-                    "email": "info@picqer.com"
+                    "email": "info@picqer.com",
+                    "homepage": "https://picqer.com"
                 }
             ],
             "description": "An easy to use, non-bloated, barcode generator in PHP. Creates SVG, PNG, JPG and HTML images from the most used 1D barcode standards.",
-            "homepage": "http://github.com/picqer/php-barcode-generator",
+            "homepage": "https://github.com/picqer/php-barcode-generator",
             "keywords": [
                 "CODABAR",
                 "Code11",
@@ -445,7 +452,7 @@
                 "svg",
                 "upc"
             ],
-            "time": "2017-09-28T19:23:19+00:00"
+            "time": "2020-01-11T20:06:19+00:00"
         },
         {
             "name": "psr/log",
@@ -2018,7 +2025,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.6",
+        "php": ">=7.0",
         "ext-json": "*"
     },
     "platform-dev": []
