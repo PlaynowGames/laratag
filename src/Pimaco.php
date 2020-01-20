@@ -2,7 +2,7 @@
 
 namespace PlaynowGames\LaraTag;
 
-//use mPDF;
+use \Mpdf\Mpdf;
 
 class Pimaco
 {
@@ -38,16 +38,15 @@ class Pimaco
 
         $this->tags = new \ArrayObject();
 
-        $this->pdf = new \Mpdf\Mpdf();(
-            'utf-8',
-            array($this->width,$this->height),
-            $this->fontSize,
-            null,
-            $this->marginLeft,
-            $this->marginRight,
-            $this->marginTop,
-            $this->marginBottom
-        );
+        $this->pdf = new Mpdf([
+				'mode' => 'utf-8',
+				'format' => array($this->width,$this->height),
+				'default_font_size' => $this->fontSize,
+				'margin_left' => $this->marginLeft,
+				'margin_right' =>  $this->marginRight,
+				'margin_top' => $this->marginTop,
+				'margin_bottom' => $this->marginBottom
+			]);
     }
 
     private function loadConfig()
